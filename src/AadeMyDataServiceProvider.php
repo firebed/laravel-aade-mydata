@@ -14,10 +14,11 @@ class AadeMyDataServiceProvider extends ServiceProvider
             $config = $this->app->make('config');
             
             return new MyData(
-                $config->get('mydata.username'),
-                $config->get('mydata.password'),
-                $config->get('mydata.environment'),
-                $config->get('mydata.channel')
+                username: $config->get('mydata.username'),
+                password: $config->get('mydata.password'),
+                environment: $config->get('mydata.environment'),
+                channel: $config->get('mydata.channel'),
+                connectionTimeout: $config->get('mydata.timeout')
             );
         });
     }

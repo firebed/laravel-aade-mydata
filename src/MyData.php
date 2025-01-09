@@ -25,10 +25,11 @@ use Firebed\AadeMyData\Models\ResponseDoc;
 
 class MyData
 {
-    public function __construct(string $username, string $password, string $environment, ?string $channel = 'erp')
+    public function __construct(string $username, string $password, string $environment, ?string $channel = 'erp', int $connectionTimeout = 10)
     {
         MyDataRequest::setCredentials($username, $password);
         MyDataRequest::setEnvironment($environment, $channel === 'provider');
+        MyDataRequest::setConnectionTimeout($connectionTimeout);
     }
 
     /**
