@@ -1,0 +1,50 @@
+{
+  "name": "firebed/laravel-aade-mydata",
+  "type": "package",
+  "description": "A simple Laravel wrapper for aade-mydata repository",
+  "keywords": [
+    "myDATA",
+    "AADE",
+    "ΑΑΔΕ",
+    "Laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Okan Giritli",
+      "email": "okan.giritli@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "firebed/aade-mydata": "^5.2",
+    "illuminate/support": "^11.37"
+  },
+  "autoload": {
+    "psr-4": {
+      "Firebed\\LaravelAadeMyData\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Firebed\\LaravelAadeMyData\\AadeMyDataServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
