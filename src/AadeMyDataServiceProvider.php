@@ -13,7 +13,7 @@ class AadeMyDataServiceProvider extends ServiceProvider
 
         $config = $this->app->make('config');
         MyDataRequest::setCredentials($config->get('mydata.username'), $config->get('mydata.password'));
-        MyDataRequest::setEnvironment($config->get('mydata.environment'), $config->get('mydata.environment') === 'provider');
+        MyDataRequest::setEnvironment($config->get('mydata.environment'), $config->get('mydata.channel') === 'provider');
         MyDataRequest::setConnectionTimeout($config->get('mydata.timeout'));
     }
 }
